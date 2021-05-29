@@ -1,0 +1,165 @@
+body {
+    color: black;
+	background-color: aliceblue;
+	font-family: 'New Tegomin', serif;
+}
+
+@font-face {
+	font-family: 'New Tegomin';
+	src: url(NewTegomin-Regular.ttf);
+}
+
+nav table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+	table-layout: fixed;
+}
+
+nav table th {
+	padding: 2% 0% 2% 0%;
+	background-color: darkred;
+}
+
+nav table a {
+    color: azure;
+	text-decoration: none;
+    font-size: 1.2em;
+}
+
+figure {
+    margin: 1% 1% 1% 0%;
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+}
+
+.term::after {
+	content: ":";
+}
+
+.term {
+	font-weight: bold;
+}
+
+code, pre {
+	background-color: lightgray;
+}
+
+header {
+    text-align: center;
+	margin-bottom: 2%;
+}
+
+footer {
+    float: left;
+}
+
+footer p {
+	font-size: 1.5em;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+	
+	.row {
+		display: flex;
+	}
+	
+	.column {
+		flex: 50%;
+		padding: 2%;
+		margin: 0% 1% 0% 1%;
+	}
+
+	footer p{
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	
+	.column {
+		padding: 0%;
+		margin: 0% 1% 0% 1%;
+	}
+
+	#col1 {
+		display: flex;
+		flex: 67%;
+	}
+
+	#col2 {
+		flex: 33%
+	}
+
+	#col1 .innercol {
+		flex: 50%;
+		margin: 0% 1% 0% 1%;
+	}
+
+	#col1code {
+		flex: 33%;
+	}
+
+	#col2code {
+		display: flex;
+		flex: 67%
+	}
+
+	#col2code .innercol {
+		flex: 50%;
+		margin: 0% 1% 0% 1%;
+	}
+
+	#col1descriptions {
+		flex: 33%;
+	}
+
+	#col2descriptions {
+		display: flex;
+		flex: 67%
+	}
+
+	#col2descriptions .innercol {
+		flex: 50%;
+		margin: 0% 1% 0% 1%;
+	}
+
+	header {
+		grid-area: header;
+	}
+
+	nav {
+		grid-area: nav;
+	}
+	
+	main {
+		grid-area: main;
+	}
+
+	footer p{
+		font-size: 1.0em;
+	}
+
+	footer {
+		float: left;
+		grid-area: footer;
+	}
+
+	.wrapper {
+		display: grid;
+		grid-template-areas:
+		'header nav'
+		'main main'
+		'footer footer';
+		grid-gap: 2%;
+		padding: 2%;
+		margin-top: 2%;
+	}
+}

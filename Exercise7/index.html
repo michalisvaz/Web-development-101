@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Python - General Info</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="wrapper">
+	<div id="date-message"></div>
+	<header>
+		<h1>Python Programming Language</h1>
+		<div class="center-vertically">
+			<h4>Dark Mode: </h4>
+			<label class="switch">
+				<input type="checkbox">
+				<span onclick="ChangeColors()" class="slider round"></span>
+			</label>
+		</div>
+		<div class="center-vertically">
+			<h4>Make formal: </h4>
+			<label class="switch">
+				<input type="checkbox">
+				<span onClick="ChangeFormality()" class="slider round"></span>
+			</label>
+		</div>
+	</header>
+
+	<nav>
+		<table>
+			<tr>
+				<th><a href="index.html">Fun stuff about Python</a></th>
+			</tr>
+			<tr>
+				<th><a href="code-examples.html">Code examples</a></th>
+			</tr>
+			<tr>
+				<th><a href="descriptions.html">Term descriptions</a></th>
+			</tr>
+		</table>
+	</nav>
+
+	<main>
+		<article>
+			<h2>General information</h2>
+			<div class="row">
+				<div class="column">
+					<figure>
+						<picture>
+							<source media="(min-width:465px)" srcset="images/python_logo_high_res.png">
+							<img src="images/python_logo_low_res.png" alt="Python Logo">
+						</picture>
+						<figcaption>Python logo</figcaption>
+					</figure>
+					<section>
+						<h3>Introduction</h3>
+						<p>Python is a high-level interpreted programming language. It is a general-purpose language
+							and it supports many different programming paradigms, including structured, functional
+							and object-oriented programming. It emphasizes on code readability and easiness of code
+							development. These are achieved through code indentation and through hiding of low-level
+							operations from the programmer. As a result of easiness to learn and use, Python is
+							commonly used not only by programmers and people with Computer Science background, but
+							by scientists of other disciplines as well. For this reason it consistently ranks in the
+							top spots of the list with the most used programming languages.</p>
+					</section>
+					<section>
+						<h3>History</h3>
+						<p>The first version of Python was developed between 1989 and 1991 at Centrum Wiskunde &
+							Informatica (CWI) in the Netherlands by Guido van Rossum, who continued to be the lead
+							developer for the project until 2018. In the year 2000, Python 2.0 was released with the
+							new version including major new features such as support for unicode and a more
+							sophisticated garbage collector. Another key station in the language's history was in
+							2008 when the Python 3.0 was released. This version was a major revision of the language
+							and as a result, a lot of source code written in the previous versions couldn't be
+							executed in the new one. The latest version of Python as of 25 April 2021 is Python
+							3.9.4.</p>
+					</section>
+				</div>
+				<div class="column">
+					<section>
+						<h3>Syntactic and semantic features</h3>
+						<p>As stated in the introduction, Python was designed to be an easy to understand language.
+							Instead of using curly brackets (like other languages such as C or Java) to delimit blocks,
+							it uses whitespace indentation. Instead of using punctuation for logical conditions, it uses
+							English keywords. Though semicolons after commands are allowed, they are rarely used. In
+							contrast to most programming languages, it allows chained comparisons such as
+							<code>a &lt;= b &lt;= c</code>. Python also doesn't bind a variable name to a certain type
+							of data, which makes it easier for non programmers to use. Of course these are not all the
+							syntactic and semantic characteristics of Python but some that distinguish it from other
+							popular programming languages.</p>
+					</section>
+					<section>
+						<h3>Uses</h3>
+						<p>Python is used in a wide range of activities. It can be used as a scripting language for web
+							applications, usually with web frameworks like Django or Flask. Another field where Python
+							is widely used is scientific computing with libraries such as NumPy, Matplotlib, SciPy or
+							more specialized frameworks such as Biopython or Astropy for domain-specific work. Python is
+							also the most widely used language for artificial intelligence and machine learning projects
+							with libraries such as Scikit-learn, TensorFlow, Keras and PyTorch. Some large technology
+							organizations who use Python include Wikipedia, Google, CERN, NASA, Facebook, Amazon,
+							Instagram, Spotify, Reddit and many more.
+						</p>
+					</section>
+				</div>
+			</div>
+		</article>
+	</main>
+
+	<footer>
+		<p><span id="source">Where did I find these? </span> <a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">Wikipedia</a></p>
+	</footer>
+	<script src="lib/functionality.js" type="text/javascript"></script>
+</body>
+
+</html>

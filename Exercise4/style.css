@@ -1,0 +1,94 @@
+body {
+    color: black;
+	background-color: aliceblue;
+	font-family: 'New Tegomin', serif;
+}
+
+@font-face {
+	font-family: 'New Tegomin';
+	src: url(NewTegomin-Regular.ttf);
+}
+
+nav table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background-color: darkred;
+    border: 2px solid black;
+	table-layout: fixed;
+}
+
+nav table, th {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+nav table a {
+    color: azure;
+	text-decoration: none;
+    font-size: 1.1em;
+}
+
+figure {
+    float: left;
+    margin: 10px 10px 10px 0px;
+}
+
+img {
+	border: 3px solid black;
+}
+
+.term::after {
+	content: ":";
+}
+
+.term {
+	font-weight: bold;
+}
+
+.row {
+	display: flex;
+}
+
+pre, code {
+	background-color: lightgray;
+}
+
+.column {
+	flex: 50%;
+	padding: 10px;
+	margin: 0% 1% 0% 1%;
+}
+
+header {
+    text-align: center;
+	grid-area: header;
+}
+
+nav {
+	grid-area: nav;
+}
+
+main {
+	grid-area: main;
+}
+
+footer {
+    float: left;
+	grid-area: footer;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-areas:
+    'header nav'
+    'main main'
+    'footer footer';
+	grid-gap: 10px;
+	padding: 10px;
+	margin-top: 2%;
+}
+
+h1 {
+	margin: auto;
+}

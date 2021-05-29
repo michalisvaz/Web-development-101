@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="utf-8">
+    <title>Μιχαήλ Βαζαίος - p3170013 - Κεντρική σελίδα</title>
+</head>
+
+<body>
+    <header>
+        <h1>Η σελίδα μου</h1>
+        <p>Μιχαήλ Βαζαίος - p3170013</p>
+    </header>
+
+    <nav>
+        <table>
+            <tr>
+                <th><a href="index.html">Κεντρική σελίδα</a></th>
+                <th><a href="university-projects.html">Project πανεπιστημίου</a></th>
+                <th><a href="fun-stuff.html">Γενικά ενδιαφέροντα</a></th>
+            </tr>
+        </table>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Γενικές πληροφορίες</h2>
+            <section>
+                <h3>Εισαγωγή</h3>
+                <img src="images/my_face.jpg" width="150" height="200" alt="Photo of myself">
+                <p>Λέγομαι Μιχάλης Βαζαίος, είμαι τεταρτοετής φοιτητής στο <a href="https://www.dept.aueb.gr/cs" target="_blank">Τμήμα
+                        Πληροφορικής</a> του <a href="https://www.aueb.gr/" target="_blank">Οικονομικού Πανεπιστημίου Αθηνών</a> και
+                    αυτή είναι η σελίδα που έφτιαξα στα πλαίσια της πρώτης εργασίας του μαθήματος "Τεχνολογίες και
+                    Προγραμματισμός Εφαρμογών στον Ιστό".</p>
+            </section>
+            <section>
+                <h3>Επιστημονικά Ενδιαφέροντα</h3>
+                <p>Κατά την διάρκεια των σπουδών μου έχω βρει αρκετά πράγματα στον τομέα της Πληροφορικής και σε
+                    άλλους συναφείς τομείς που να με ενδιαφέρουν. Αυτά είναι η Τεχνητή Νοημοσύνη, η Θεωρητική
+                    Πληροφορική και κάποια κομμάτια των Εφαρμοσμένων Μαθηματικών όπως η Επιχειρησιακή Έρευνα και η
+                    Στατιστική.</p>
+            </section>
+            <section>
+                <h3>Εργασιακή εμπειρία</h3>
+                <p>Η εργασιακή μου εμπειρία ως τώρα δεν περιλαμβάνει κάποια δουλειά στον τομέα της Πληροφορικής αλλά
+                    δουλειές άλλων ειδών όπως διανομή φυλλαδίων, ομαδάρχης σε κατασκήνωση και κάποια ιδιαίτερα
+                    μαθήματα μαθηματικών.</p>
+            </section>
+        </article>
+        <h3>Επικοινωνήστε μαζί μου συμπληρώνοντας την παρακάτω φόρμα</h3>
+        <form action="mailto:mich.vaz.99@gmail.com" method="POST">
+            <fieldset>
+                <legend>Προσωπικά στοιχεία</legend>
+
+                <label for="first_name_id">Όνομα: </label>
+                <input type="text" id="first_name_id" name="first_name" pattern="[a-zA-Zα-ωΑ-Ω]+" maxlength="50"
+                    required title="Μόνο γράμματα του ελληνικού και του αγγλικού αλφαβήτου" />
+                <br />
+
+                <label for="last_name_id">Επώνυμο: </label>
+                <input type="text" id="last_name_id" name="last_name" pattern="[a-zA-Zα-ωΑ-Ω]+" maxlength="50" required
+                    title="Μόνο γράμματα του ελληνικού και του αγγλικού αλφαβήτου" />
+                <br />
+
+                <label for="birth_date_id">Ημερομηνία γέννησης: </label>
+                <input type="date" id="birth_date_id" name="birth_date" min="1900-01-01" max="2021-01-01" required />
+                <br />
+
+                <label for="gender_id">Φύλο: </label>
+                <select id="gender_id" name="gender">
+                    <option disabled selected> -- Επιλέξτε -- </option>
+                    <option value="Male">Άντρας</option>
+                    <option value="Female">Γυναίκα</option>
+                    <option value="Other">Άλλο</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Στοιχεία επικοινωνούντα</legend>
+
+                <label for="mail_id">E-mail: </label>
+                <input type="email" id="mail_id" name="mail" title="Δώστε έγκυρη διεύθυνση e-mail" required />
+                <br />
+
+                <label for="phone_id">Τηλέφωνο: </label>
+                <input type="text" id="phone_id" name="phone" pattern="([0-9]{12})|([0-9]{10})" title="Το τηλέφωνο πρέπει να αποτελείται από 10 ή 12 ψηφία"/>
+            </fieldset>
+
+            <fieldset>
+                <legend>Γράψτε το μήνυμα σας παρακάτω</legend>
+
+                <textarea id="message_id" name="message" rows="4" cols="60" minlength="20" required></textarea>
+            </fieldset>
+
+            <input type="submit" value="Αποστολή μηνύματος" />
+        </form>
+    </main>
+
+    <footer>
+        <h3>Στοιχεία επικοινωνίας:</h3>
+        <p>Προσωπικό e-mail: mich.vaz.99@gmail.com</p>
+        <p>Πανεπιστημιακό e-mail: p3170013@aueb.gr</p>
+        <p>Τηλέφωνο: (+30) 6945711823</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form and Questionaire</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="wrapper">
+	<div id="date-message"></div>
+	<header>
+		<h1>Python Programming Language</h1>
+		<div class="center-vertically">
+			<h4>Dark Mode: </h4>
+			<label class="switch">
+				<input type="checkbox">
+				<span onclick="ChangeColors()" class="slider round"></span>
+			</label>
+		</div>
+		<div class="center-vertically">
+			<h4>Make formal: </h4>
+			<label class="switch">
+				<input type="checkbox">
+				<span onClick="ChangeFormality()" class="slider round"></span>
+			</label>
+		</div>
+	</header>
+
+	<nav>
+		<table>
+			<tr>
+				<th><a href="index.html">Fun stuff about Python</a></th>
+			</tr>
+			<tr>
+				<th><a href="code-examples.html">Code examples</a></th>
+			</tr>
+			<tr>
+				<th><a href="descriptions.html">Term descriptions</a></th>
+			</tr>
+			<tr>
+				<th><a href="register.html">Contribute!</a></th>
+			</tr>
+		</table>
+	</nav>
+
+	<main>
+		<h2>Create profile to contribute to my page</h2>
+		<form action="mailto:mich.vaz.99@gmail.com" method="POST" class="row" autocomplete="on">
+
+			<fieldset class="column" id="form">
+				<legend>Personal Info</legend>
+				<label for="first_name_id" class="required">First Name: </label><br />
+				<input type="text" id="first_name_id" name="first_name" pattern="[a-zA-Z]+" maxlength="50" required
+					title="Only letters of the Latin alphabet" />
+
+				<p>
+					<label for="last_name_id" class="required">Last Name: </label><br />
+					<input type="text" id="last_name_id" name="last_name" pattern="[a-zA-Z]+" maxlength="50" required
+						title="Only letters of the Latin alphabet" />
+				</p>
+
+				<p>
+					<label for="birth_date_id">Date of Birth: </label><br />
+					<input type="date" id="birth_date_id" name="birth_date" min="1900-01-01" max="2021-01-01"
+						required />
+				</p>
+
+				<p>
+					<label for="gender_id">Gender: </label><br />
+					<select id="gender_id" name="gender">
+						<option disabled selected> -- Choose -- </option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+						<option value="Other">Other</option>
+					</select>
+				</p>
+
+				<p>
+					<label for="mail_id" class="required">E-mail: </label><br />
+					<input type="email" id="mail_id" name="mail" title="Give a valid email address" required />
+				</p>
+
+				<label for="phone1_id">Phone Number: </label><br />
+				<input type="text" id="phone1_id" name="phone1" pattern="([0-9]{12})|([0-9]{10})"
+					title="Telephone number must be 12 or 10 characters (these numbers correspond to number with or without the country code)" />
+				<details>
+					<summary>About phone number</summary>
+					<p>You can either give your phone number with or without the country code. In the first case your
+						phone number should be 12 digits long and in the second case 10 digits.</p>
+				</details>
+
+				<p>
+					<label for="phone2_id">Second Phone Number: </label><br />
+					<input type="text" id="phone2_id" name="phone2" pattern="([0-9]{12})|([0-9]{10})"
+						title="Telephone number must be 12 or 10 characters (these numbers correspond to number with or without the country code)" />
+				</p>
+
+				<p>
+					<label for="address_id">Address: </label><br />
+					<input type="text" id="address_id" name="address" title="Your current address" />
+				</p>
+
+				<p>
+					<label for="country_id">Country: </label><br />
+					<input list="countries" type="text" id="country_id" name="country"
+						title="The country where you currently live. Not necessarily where you come from." />
+					<datalist id="countries">
+					</datalist>
+				</p>
+
+				<p>
+					<label for="username_id" class="required">Username: </label><br />
+					<input type="text" id="username_id" name="username" required />
+				</p>
+
+				<label for="password1_id" class="required">Password: </label><br />
+				<input type="password" id="password1_id" name="password1" required
+					title="Must contain at least a capital letter, a number and a special character and be at least 8 characters long." />
+				<details>
+					<summary>View safety requirements</summary>
+					<p>The password must contain at least an uppercase letter, a number and a special character (e.g.
+						@#$%^&*) and be at least 8 characters long. Even longer passwords are recommended.</p>
+				</details>
+
+				<p>
+					<label for="password2_id" class="required">Retype password: </label><br />
+					<input type="password" id="password2_id" name="password2" required title="Retype your password." />
+				</p>
+
+			</fieldset>
+
+			<fieldset class="column" id="questionaire">
+				<legend>Other Questions</legend>
+				<p>
+					<label for="fav_number_id">Favourite Number: </label><br />
+					<input type="number" id="fav_number_id" name="fav_number" value="73" />
+				</p>
+
+				<p>
+					<label for="fav_color_id">Favourite Color: </label><br />
+					<input type="text" id="fav_color_id" name="fav_color" value="black" pattern="[a-zA-Z ]+"
+						title="Give an actual color" />
+				</p>
+
+				<p>
+					<label for="fav_team_id">Favourite football team: </label><br />
+					<input type="text" id="fav_team_id" name="fav_team" />
+				</p>
+
+				<p>
+					<label for="fav_food_id">Favourite Food: </label><br />
+					<input type="text" id="fav_food_id" name="fav_food" pattern="[a-zA-Z ]+" />
+				</p>
+
+				<p>
+					<label for="fav_artist_id">Favourite Band/Artist: </label><br />
+					<input type="text" id="fav_artist_id" name="fav_artist" />
+				</p>
+
+				<p>
+					<label for="fav_book_id">Favourite Book: </label><br />
+					<input type="text" id="fav_book_id" name="fav_book" />
+				</p>
+
+				<p>
+					<label for="fav_language_id">Favourite Programming Language: </label><br />
+					<input list="languages" type="text" id="fav_language_id" name="fav_language" />
+					<datalist id="languages">
+					</datalist>
+				</p>
+
+				<p>
+					<label for="weight_id">Weight(kg): </label><br />
+					<input type="number" id="weight_id" name="weight" value="73" min="10" max="400"
+						title="Must be between 10 and 400 kilos" />
+				</p>
+
+				<p>
+					<label for="height_id">Height(cm): </label><br />
+					<input type="number" id="height_id" name="height" value="170" min="50" max="300"
+						title="Must be between 50 and 300 centimeters" />
+				</p>
+
+				<p>
+					<label for="blood_type_id">Blood type: </label><br />
+					<input list="blood_types" type="text" id="blood_type_id" name="blood_type"
+						title="Must be one of the following values: O+, O-, A+, A-, B+, B-, AB+, AB-" />
+					<datalist id="blood_types">
+						<option value="O+">
+						<option value="O-">
+						<option value="A+">
+						<option value="A-">
+						<option value="AB+">
+						<option value="AB-">
+						<option value="B+">
+						<option value="B-">
+					</datalist>
+				</p>
+
+				<input type="submit" value="Sign up" onclick="return checks();" />
+			</fieldset>
+		</form>
+
+	</main>
+
+	<footer>
+		<p><span id="source">Where did I find these? </span> <a href="https://en.wikipedia.org/wiki/Main_Page"
+				target="_blank">Wikipedia</a></p>
+	</footer>
+	<script src="lib/functionality.js" type="text/javascript"></script>
+	<script src="lib/validation.js" type="text/javascript"></script>
+</body>
+
+</html>
